@@ -2,6 +2,7 @@
 A program processes the data from the plane's identification.
 
 Input in EBNF language:
+    
     input      ::= { whiteSpace } { msg { whiteSpace } }
     whiteSpace ::= ' ' | '\t' | '\n' | '\r'
     msg        ::= integer { whiteSpace } ':' { whiteSpace } '[' list ']' { whiteSpace }
