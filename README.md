@@ -1,5 +1,17 @@
-# PLANES
+# AIRCRAFTS
 A program processes the data from the plane's identification.
+
+Modern aircraft are equipped with an automatic system that transmits basic flight data (identification, speed, ...).
+This data has a finite size and are sent over and over again. For reasons of redundancy, the data are transmitted independently on different frequencies.
+We assume that we have receivers that can catch that broadcast. Each receiver processes the data on one frequency and receives identification from just one plane. The receiver receives the flight(identification) data sequentially, after sufficient amount
+of data is received the data will be transmitted to our program for processing. This is repeated several times until the entire
+period of flight data is processed. Thus, if the aircraft data are 5, 12, 9, 8, 64, 93, the receiver may deliver identification e.g. in 3 parts:
+
+5, 12
+9, 8, 64
+93
+
+
 
 Input in EBNF language:
     
