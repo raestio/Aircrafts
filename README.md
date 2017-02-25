@@ -1,5 +1,5 @@
 # AIRCRAFTS
-A program processes the data from the plane's identification.
+A program processes the data from the aircraft's identification.
 
 Modern aircraft are equipped with an automatic system that transmits basic flight data (identification, speed, ...).
 This data has a finite size and are sent over and over again. For reasons of redundancy, the data are transmitted independently on different frequencies.
