@@ -1,4 +1,4 @@
-# Planes
+# PLANES
 A program processes the data from the plane's identification.
 
 Input in EBNF language:
@@ -13,7 +13,7 @@ Input in EBNF language:
 
 
 # Examples:
-
+1)
 IN:
 
     0 : [ 1, 8, 56, -9 ]
@@ -36,6 +36,37 @@ OUT:
 
     0, 666
     42, 15, 21
-a    31
+    31
 
-    
+2)
+IN:
+
+    0 : [ 1, 2, 3, 4, 5 ]
+    1 : [ 2, 1, 3, 4, 5 ]
+    2 : [ 5, 1, 4, 2, 3 ]
+    3 : [ 3, 4, 5, 1, 2 ]
+    4 : [ 5, 3, 1, 4, 2 ]
+    10000 : [ 4, 5, 2, 1, 3]
+
+OUT:
+
+    1, 10000
+    4
+    2
+    0, 3
+
+3)
+IN:
+
+    0 : [ 1, 2, 4 ]
+    1 : [ 2, 1 ]
+    2 : [ 2, 3, 1 ]
+    3 : [ 1, 2 ]
+    4 : [ 2, 4, 1]
+   
+OUT:
+
+    0, 4
+    2
+    1, 3
+
