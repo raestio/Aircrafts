@@ -562,6 +562,7 @@ int main() {
     
     initTree(&tree);
     
+    printf("Flight data:\n");
     //Reading the data (receivers) until EOF
     while (true)
     {   
@@ -584,6 +585,7 @@ int main() {
         }
     }
     
+    printf("Unique flight data:\n");
     findDuplicates(tree.root, tree.root);
 
     return 0;
