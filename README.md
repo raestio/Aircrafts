@@ -17,7 +17,7 @@ This is the way how this program receives flight (identification) data from indi
 
 The output of the program are the identification duplicates. On the one line of the output is the list of receivers (IDs), which receive the flight (identification) data from the same aircraft.
 
-Reading the data ends with reaching EOF.
+Reading the data ends with reaching the EOF.
 
 Input in EBNF language:
     
