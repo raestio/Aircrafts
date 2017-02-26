@@ -13,7 +13,11 @@ period of flight data is processed. Thus, if the aircraft data are 5, 12, 9, 8, 
 
 93
 
-This is the way how this program receives flight (identification) data from individual receivers. Received data parts the program builds via the Red Black tree (by ID of receiver) and compare with others. Its goal is to identify duplicates, so identify which receivers receive data from the same aircraft.  
+This is the way how this program receives flight (identification) data from individual receivers. Received data parts the program builds via the Red Black tree (by ID of receiver) and compare with others. Its goal is to identify duplicates, so identify which receivers receive data from the same aircraft. The situation is complicated by the fact that the receivers may not be synchronized. If the aircraft transmits data for example: 5, 12, 9, 8, 64, 93, the one receiver can capture it in the form: 5, 12, 9, 8, 64, 93, but the the receiver operating on a different can receive the data with offset: 9, 8, 64, 93, 5, 12. But these two messages are considered to be identical.
+
+The output of the program are the identification duplicates. On the one line of the output is the list of receivers (IDs), which receive the flight (identification) data from the same aircraft.
+
+Reading the data ends with reaching EOF.
 
 Input in EBNF language:
     
